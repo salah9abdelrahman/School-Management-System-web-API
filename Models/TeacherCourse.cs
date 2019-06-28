@@ -9,13 +9,15 @@ namespace School_managment_system.Models
 {
     public class TeacherCourse
     {
-        [Key, Column(Order =1)]
-        public int TeacherId { get; set; }
-        [Key, Column(Order =2)]
+        public TeacherCourse()
+        {
+            Sessions = new HashSet<session>();
+        }
 
+        public int TeacherCourseId { get; set; }
+        public int TeacherId { get; set; }
         public int CourseId { get; set; }
 
-
-
+        public virtual ICollection<Session> Sessions { get; set; }
     }
 }
