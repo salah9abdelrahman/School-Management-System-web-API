@@ -15,6 +15,7 @@ namespace School_managment_system.ViewModels
         public string Name { get; set; }
 
         public string LevelName { get; set; }
+       // public int LevelId { get; set; }
 
 
     }

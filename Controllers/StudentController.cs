@@ -11,18 +11,18 @@ namespace School_managment_system.Controllers
 {
     public class StudentController : ApiController
     {
-        public int Post(StudentViewModel studentViewModel)
+        public string Post(StudentViewModel studentViewModel)
         {
             return StudentService.Create(studentViewModel);
 
         }
 
-        public int Put(StudentViewModel studentViewModel)
+        public string Put(StudentViewModel studentViewModel)
         {
             return StudentService.Edit(studentViewModel);
         }
 
-        public void Delete(int id)
+        public void Delete(string id)
         {
             StudentService.Delete(id);
         }
@@ -33,9 +33,14 @@ namespace School_managment_system.Controllers
         }
 
 
-        public StudentViewModel Get(int id)
+        public StudentViewModel Get(string id)
         {
             return StudentService.GetOne(id);
+        }
+        //[Route("Student/GetByClass/{className:alpha}")]
+        public IEnumerable<StudentViewModel> GetByClass(string className)
+        {
+            return StudentService.GetStudentsToSepcificClass(className);
         }
     }
 }

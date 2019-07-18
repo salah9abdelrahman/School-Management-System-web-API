@@ -12,9 +12,6 @@ namespace School_managment_system.Models
             : base("name=FinalSchool")
         {
         }
-
-
-
         public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<ClassRoom> ClassRooms { get; set; }
         public virtual DbSet<Course> Courses { get; set; }

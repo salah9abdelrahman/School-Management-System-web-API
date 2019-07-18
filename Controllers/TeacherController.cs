@@ -19,8 +19,7 @@ namespace School_managment_system.Controllers
            
         }
 
-
-        public  TeacherViewModel Get(int id)
+        public  TeacherViewModel Get(string id)
         {
             return TeacherService.GetOne(id);
         }
@@ -38,7 +37,7 @@ namespace School_managment_system.Controllers
             TeacherService.PutOne( teacherModel);
         }
 
-        public void Delete(int id)
+        public void Delete(string id)
         {
             TeacherService.DeleteOne(id);
         }

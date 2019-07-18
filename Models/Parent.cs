@@ -13,13 +13,15 @@ namespace School_managment_system.Models
         {
             Students = new HashSet<Student>();
         }
-        public int ParentId { get; set; }
+        [Key]
+      [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string ParentSNN { get; set; }
         [Required]
         public string FName { get; set; }
         public string LName { get; set; }
         public string Email { get; set; }
-        public int? Password { get; set; }
-        public int SNN { get; set; }
+        public string Password { get; set; }
+        //public string SNN { get; set; }
         public ICollection<Student>Students  { get; set; }
     }
 }

@@ -8,7 +8,7 @@ namespace School_managment_system.ViewModels
 {
     public class TeacherViewModel
     {
-        public int TeacherId { get; set; }
+        public string TeacherSNN { get; set; }
 
         public string FName { get; set; }
        
@@ -18,7 +18,7 @@ namespace School_managment_system.ViewModels
         [Required]
         public string Password { get; set; }
         [Required]
-        public int SSN { get; set; }
+       // public int SSN { get; set; }
         public string Gender { get; set; }
         public int Age { get; set; }
         public string City { get; set; }

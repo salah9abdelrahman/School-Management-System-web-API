@@ -22,6 +22,7 @@ namespace School_managment_system.Services
                     v.Name = item.Name;
                     var level=context.Levels.FirstOrDefault(ww=>ww.LevelId==item.LevelId);
                     v.LevelName = level.Name;
+                    v.CourseId = item.CourseId;
                     courseListModel.Add(v);
                 }
                 return courseListModel;
@@ -39,15 +40,14 @@ namespace School_managment_system.Services
                 {
                     CourseId = course.CourseId,
                     Name = course.Name,
-                    LevelName = level.Name
-
-                };
+                    LevelName = level.Name,
+                 };
                 return courseView;
             }
         }
 
 
-        public static void PostOne(CourseViewModel courseViewModel)
+        public static int PostOne(CourseViewModel courseViewModel)
         {
             using (var context = new FinalSchool())
             {
@@ -60,7 +60,7 @@ namespace School_managment_system.Services
 
                 context.Courses.Add(course);
                 context.SaveChanges();
-
+                return course.CourseId;
             }
         }
 
@@ -91,7 +91,36 @@ namespace School_managment_system.Services
 
                 return course.CourseId;
             }
+        }
 
+        public static List<CourseViewModel> GetCoursesToTeacher(string snn)
+        {
+            using (var context = new FinalSchool())
+            {
+                var CourseViewModelList = new List<CourseViewModel>();
+                var teacherCourses = context.TeacherCourses.Where(x => x.TeacherId == snn).ToList();
+                var coursesId = new List<int>();
+                foreach (var courseId in teacherCourses)
+                {
+                    coursesId.Add(courseId.CourseId);
+                }
+                var courses = new List<Course>();
+                foreach (var courseid in coursesId)
+                {
+                    courses.Add(context.Courses.FirstOrDefault(x => x.CourseId == courseid));
+                }
+                foreach (var course in courses)
+                {
+                    var courseView = new CourseViewModel()
+                    {
+                        CourseId = course.CourseId,
+                        LevelName = course.Level.Name,
+                        Name = course.Name
+                    };
+                    CourseViewModelList.Add(courseView);
+                }
+                return CourseViewModelList;
+            }
         }
     }
 }

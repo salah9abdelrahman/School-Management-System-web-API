@@ -56,11 +56,17 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -163,22 +169,27 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AttendenceController.cs" />
     <Compile Include="Controllers\ClassRoomController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\ExamController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LevelController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ResultController.cs" />
+    <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906271715448_a.cs" />
-    <Compile Include="Migrations\201906271715448_a.Designer.cs">
-      <DependentUpon>201906271715448_a.cs</DependentUpon>
+    <Compile Include="Migrations\201907011758455_dgss.cs" />
+    <Compile Include="Migrations\201907011758455_dgss.Designer.cs">
+      <DependentUpon>201907011758455_dgss.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906271733408_b.cs" />
-    <Compile Include="Migrations\201906271733408_b.Designer.cs">
-      <DependentUpon>201906271733408_b.cs</DependentUpon>
+    <Compile Include="Migrations\201907011812594_dgsssd.cs" />
+    <Compile Include="Migrations\201907011812594_dgsssd.Designer.cs">
+      <DependentUpon>201907011812594_dgsssd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attendence.cs" />
@@ -198,14 +209,21 @@
     <Compile Include="Services\AttendenceService.cs" />
     <Compile Include="Services\ClassRoomService.cs" />
     <Compile Include="Services\CourseService.cs" />
+    <Compile Include="Services\ExamService.cs" />
     <Compile Include="Services\LevelService.cs" />
+    <Compile Include="Services\ResultService.cs" />
+    <Compile Include="Services\SessionService.cs" />
     <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\TeacherService.cs" />
     <Compile Include="ViewModels\AttendenceViewModel.cs" />
     <Compile Include="ViewModels\ClassRoomViewModel.cs" />
     <Compile Include="ViewModels\CourseViewModel.cs" />
+    <Compile Include="ViewModels\ExamViewModel.cs" />
     <Compile Include="ViewModels\LevelViewModel.cs" />
+    <Compile Include="ViewModels\Login.cs" />
     <Compile Include="ViewModels\ParentViewModel.cs" />
+    <Compile Include="ViewModels\ResultViewModel.cs" />
+    <Compile Include="ViewModels\SessionViewModel.cs" />
     <Compile Include="ViewModels\StudentViewModel.cs" />
     <Compile Include="ViewModels\TeacherViewModel.cs" />
   </ItemGroup>
@@ -293,11 +311,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906271715448_a.resx">
-      <DependentUpon>201906271715448_a.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907011758455_dgss.resx">
+      <DependentUpon>201907011758455_dgss.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906271733408_b.resx">
-      <DependentUpon>201906271733408_b.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907011812594_dgsssd.resx">
+      <DependentUpon>201907011812594_dgsssd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

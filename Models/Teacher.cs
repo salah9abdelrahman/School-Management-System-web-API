@@ -15,8 +15,9 @@ namespace School_managment_system.Models
             TeacherCourses = new HashSet<TeacherCourse>();
             Sessions = new HashSet<Session>();
         }
-
-        public int TeacherId { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string TeacherId { get; set; }
         [Required]
         public string FName { get; set; }
         [Required]
@@ -26,7 +27,7 @@ namespace School_managment_system.Models
         [Required]
         public string Password { get; set; }
         [Required]
-        public int SSN { get; set; }
+       // public int SSN { get; set; }
         public string Gender { get; set; }
         public int Age { get; set; }
         public string City { get; set; }

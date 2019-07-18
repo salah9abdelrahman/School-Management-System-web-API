@@ -27,19 +27,24 @@ namespace School_managment_system.Controllers
 
 
 
-        public void Post(ClassRoomViewModel classRoomViewModel)
+        public int Post(ClassRoomViewModel classRoomViewModel)
         {
-            ClassRoomService.PostOne(classRoomViewModel);
+            return ClassRoomService.PostOne(classRoomViewModel);
 
         }
-        public void Put(int id, ClassRoomViewModel classRoomViewModel)
+        public void Put(ClassRoomViewModel classRoomViewModel)
         {
-            ClassRoomService.PutOne(id, classRoomViewModel);
+            ClassRoomService.PutOne(classRoomViewModel);
         }
 
         public void Delete(int id)
         {
             ClassRoomService.DeleteOne(id);
+        }
+
+        public IEnumerable<ClassRoomViewModel> GetClassesToLevel(string levelName)
+        {
+            return ClassRoomService.GetClassesToLevel(levelName);
         }
     }
 }

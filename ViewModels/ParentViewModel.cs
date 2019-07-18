@@ -8,7 +8,7 @@ namespace School_managment_system.ViewModels
 {
     public class ParentViewModel
     {
-        public int ParentId { get; set; }
+        public string ParentId { get; set; }
         [Required]
         public string FName { get; set; }
         public string LName { get; set; }

@@ -175,3 +175,105 @@ E:\IT\C#\School managment system\obj\Debug\School managment system.csproj.CopyCo
 E:\IT\C#\School managment system\obj\Debug\School_managment_system.Migrations.a.resources
 E:\IT\C#\School managment system\obj\Debug\School managment system.csproj.GenerateResource.cache
 E:\IT\C#\School managment system\obj\Debug\School_managment_system.Migrations.b.resources
+E:\IT\C#\School managment system\obj\Debug\School_managment_system.Migrations.b1.resources
+E:\IT\C#\School managment system\obj\Debug\School_managment_system.Migrations.a1.resources
+E:\IT\C#\School managment system\obj\Debug\School_managment_system.Migrations.attendId.resources
+E:\IT\C#\School managment system\obj\Debug\School_managment_system.Migrations.attendIdReomvePrimaryStuSession.resources
+E:\IT\C#\School managment system\obj\Debug\School_managment_system.Migrations.order.resources
+E:\IT\C#\School managment system\obj\Debug\School_managment_system.Migrations.asa.resources
+E:\IT\C#\School managment system\obj\Debug\School_managment_system.Migrations.asasasa.resources
+E:\IT\C#\School managment system\obj\Debug\School_managment_system.Migrations.bla.resources
+E:\IT\C#\School managment system\obj\Debug\School_managment_system.Migrations.blaa.resources
+E:\IT\C#\School managment system\obj\Debug\School_managment_system.Migrations.blaaa.resources
+E:\IT\C\School managment system\bin\School managment system.dll.config
+E:\IT\C\School managment system\bin\School managment system.dll
+E:\IT\C\School managment system\bin\School managment system.pdb
+E:\IT\C\School managment system\bin\roslyn\csc.exe
+E:\IT\C\School managment system\bin\roslyn\csc.exe.config
+E:\IT\C\School managment system\bin\roslyn\csc.rsp
+E:\IT\C\School managment system\bin\roslyn\csi.exe
+E:\IT\C\School managment system\bin\roslyn\csi.exe.config
+E:\IT\C\School managment system\bin\roslyn\csi.rsp
+E:\IT\C\School managment system\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\IT\C\School managment system\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\IT\C\School managment system\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\IT\C\School managment system\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\IT\C\School managment system\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\IT\C\School managment system\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\IT\C\School managment system\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\IT\C\School managment system\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\IT\C\School managment system\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\IT\C\School managment system\bin\roslyn\Microsoft.Managed.Core.targets
+E:\IT\C\School managment system\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\IT\C\School managment system\bin\roslyn\System.AppContext.dll
+E:\IT\C\School managment system\bin\roslyn\System.Collections.Immutable.dll
+E:\IT\C\School managment system\bin\roslyn\System.Console.dll
+E:\IT\C\School managment system\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\IT\C\School managment system\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\IT\C\School managment system\bin\roslyn\System.IO.Compression.dll
+E:\IT\C\School managment system\bin\roslyn\System.IO.FileSystem.dll
+E:\IT\C\School managment system\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\IT\C\School managment system\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\IT\C\School managment system\bin\roslyn\System.IO.Pipes.dll
+E:\IT\C\School managment system\bin\roslyn\System.Reflection.Metadata.dll
+E:\IT\C\School managment system\bin\roslyn\System.Security.AccessControl.dll
+E:\IT\C\School managment system\bin\roslyn\System.Security.Claims.dll
+E:\IT\C\School managment system\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\IT\C\School managment system\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\IT\C\School managment system\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\IT\C\School managment system\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\IT\C\School managment system\bin\roslyn\System.Security.Principal.Windows.dll
+E:\IT\C\School managment system\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\IT\C\School managment system\bin\roslyn\System.ValueTuple.dll
+E:\IT\C\School managment system\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\IT\C\School managment system\bin\roslyn\System.Xml.XmlDocument.dll
+E:\IT\C\School managment system\bin\roslyn\System.Xml.XPath.dll
+E:\IT\C\School managment system\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\IT\C\School managment system\bin\roslyn\vbc.exe
+E:\IT\C\School managment system\bin\roslyn\vbc.exe.config
+E:\IT\C\School managment system\bin\roslyn\vbc.rsp
+E:\IT\C\School managment system\bin\roslyn\VBCSCompiler.exe
+E:\IT\C\School managment system\bin\roslyn\VBCSCompiler.exe.config
+E:\IT\C\School managment system\bin\Antlr3.Runtime.dll
+E:\IT\C\School managment system\bin\EntityFramework.dll
+E:\IT\C\School managment system\bin\EntityFramework.SqlServer.dll
+E:\IT\C\School managment system\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\IT\C\School managment system\bin\Microsoft.Web.Infrastructure.dll
+E:\IT\C\School managment system\bin\Newtonsoft.Json.dll
+E:\IT\C\School managment system\bin\System.Net.Http.Formatting.dll
+E:\IT\C\School managment system\bin\System.Web.Cors.dll
+E:\IT\C\School managment system\bin\System.Web.Helpers.dll
+E:\IT\C\School managment system\bin\System.Web.Http.Cors.dll
+E:\IT\C\School managment system\bin\System.Web.Http.dll
+E:\IT\C\School managment system\bin\System.Web.Http.WebHost.dll
+E:\IT\C\School managment system\bin\System.Web.Mvc.dll
+E:\IT\C\School managment system\bin\System.Web.Optimization.dll
+E:\IT\C\School managment system\bin\System.Web.Razor.dll
+E:\IT\C\School managment system\bin\System.Web.WebPages.Deployment.dll
+E:\IT\C\School managment system\bin\System.Web.WebPages.dll
+E:\IT\C\School managment system\bin\System.Web.WebPages.Razor.dll
+E:\IT\C\School managment system\bin\WebGrease.dll
+E:\IT\C\School managment system\bin\EntityFramework.xml
+E:\IT\C\School managment system\bin\EntityFramework.SqlServer.xml
+E:\IT\C\School managment system\bin\System.Web.Http.Cors.xml
+E:\IT\C\School managment system\bin\Newtonsoft.Json.xml
+E:\IT\C\School managment system\bin\System.Net.Http.Formatting.xml
+E:\IT\C\School managment system\bin\System.Web.Helpers.xml
+E:\IT\C\School managment system\bin\System.Web.Http.xml
+E:\IT\C\School managment system\bin\System.Web.Http.WebHost.xml
+E:\IT\C\School managment system\bin\System.Web.Mvc.xml
+E:\IT\C\School managment system\bin\System.Web.Optimization.xml
+E:\IT\C\School managment system\bin\System.Web.Razor.xml
+E:\IT\C\School managment system\bin\System.Web.WebPages.xml
+E:\IT\C\School managment system\bin\System.Web.WebPages.Deployment.xml
+E:\IT\C\School managment system\bin\System.Web.WebPages.Razor.xml
+E:\IT\C\School managment system\bin\Antlr3.Runtime.pdb
+E:\IT\C\School managment system\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\IT\C\School managment system\obj\Debug\School managment system.csprojAssemblyReference.cache
+E:\IT\C\School managment system\obj\Debug\School managment system.csproj.CoreCompileInputs.cache
+E:\IT\C\School managment system\obj\Debug\School managment system.csproj.CopyComplete
+E:\IT\C\School managment system\obj\Debug\School managment system.dll
+E:\IT\C\School managment system\obj\Debug\School managment system.pdb
+E:\IT\C\School managment system\obj\Debug\School_managment_system.Migrations.dgss.resources
+E:\IT\C\School managment system\obj\Debug\School managment system.csproj.GenerateResource.cache
+E:\IT\C\School managment system\obj\Debug\School_managment_system.Migrations.dgsssd.resources

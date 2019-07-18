@@ -27,9 +27,9 @@ namespace School_managment_system.Controllers
 
 
 
-        public void Post(CourseViewModel courseModel)
+        public int Post(CourseViewModel courseModel)
         {
-            CourseService.PostOne(courseModel);
+            return CourseService.PostOne(courseModel);
 
         }
         public void Put(CourseViewModel courseModel)
@@ -40,6 +40,11 @@ namespace School_managment_system.Controllers
         public int Delete(int id)
         {
             return CourseService.DeleteOne(id);
+        }
+
+        public IEnumerable<CourseViewModel> GetCoursesToTeacher(string ssn)
+        {
+            return CourseService.GetCoursesToTeacher(ssn);
         }
 
     }

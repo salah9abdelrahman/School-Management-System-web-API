@@ -26,9 +26,9 @@ namespace School_managment_system.Controllers
 
 
 
-        public void Post(LevelViewModel levelModel)
+        public int Post(LevelViewModel levelModel)
         {
-            LevelService.PostOne(levelModel);
+            return LevelService.PostOne(levelModel);
 
         }
         public void Put(int id, LevelViewModel levelModel)
@@ -41,5 +41,14 @@ namespace School_managment_system.Controllers
             LevelService.DeleteOne(id);
         }
 
+        public int GetLevelByName(string name)
+        {
+            return LevelService.GetLevelByName(name);
+        }
+
+        public IEnumerable<LevelViewModel> GetLevelsToTeacher(string teacherSnn)
+        {
+            return LevelService.GetLevelsToTeacher(teacherSnn);
+        }
     }
 }

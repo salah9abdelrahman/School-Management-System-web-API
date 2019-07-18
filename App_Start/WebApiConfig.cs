@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace School_managment_system
 {
@@ -12,7 +13,10 @@ namespace School_managment_system
             // Web API configuration and services
 
             // Web API routes
+            config.EnableCors();
+
             config.MapHttpAttributeRoutes();
+
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
@@ -26,7 +30,8 @@ namespace School_managment_system
             config.Formatters.Remove(config.Formatters.XmlFormatter);
             //config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling
             //    = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-            
+
+
         }
     }
 }

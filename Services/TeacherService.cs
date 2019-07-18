@@ -32,7 +32,8 @@ namespace School_managment_system.Services
                     }
                     var teacher = new TeacherViewModel()
                     {
-                        TeacherId = item.TeacherId,
+                        
+                        //TeacherId = item.TeacherId,
                         FName = item.FName,
                         Age = item.Age,
                         City = item.City,
@@ -42,7 +43,7 @@ namespace School_managment_system.Services
                         Gender = item.Gender,
                         Password = item.Password,
                         Phone = item.Phone,
-                        SSN = item.SSN,
+                        TeacherSNN = item.TeacherId,
                         CourseName = courseList
                     };
                     TeacherModel.Add(teacher);
@@ -50,9 +51,7 @@ namespace School_managment_system.Services
                 return TeacherModel;
             }
         }
-
-
-        public static TeacherViewModel GetOne(int id)
+        public static TeacherViewModel GetOne(string id)
         {
             using (var context = new FinalSchool())
             {
@@ -73,7 +72,7 @@ namespace School_managment_system.Services
 
                 var teacherModel = new TeacherViewModel()
                 {
-                    TeacherId = teacher.TeacherId,
+                    TeacherSNN = teacher.TeacherId,
                     FName =teacher.FName,
                     Age = teacher.Age,
                     City = teacher.City,
@@ -83,9 +82,8 @@ namespace School_managment_system.Services
                     Gender = teacher.Gender,
                     Password = teacher.Password,
                     Phone = teacher.Phone,
-                    SSN = teacher.SSN,
-                    CourseName = courseList
-                    
+                   // SSN = teacher.SSN,
+                    CourseName = courseList,
                 };
                 return teacherModel;
             }
@@ -95,35 +93,31 @@ namespace School_managment_system.Services
         {
             using (var context = new FinalSchool())
             {
-                var id = teacherModel.TeacherId;
+                var id = teacherModel.TeacherSNN;
 
                 foreach (var item in teacherModel.CourseName)
                 {
                     var CourseId = context.Courses.FirstOrDefault(w => w.Name == item).CourseId;
-
                     var teacherCourse = context.TeacherCourses.Find(id);
                     teacherCourse.TeacherId = id;
                     teacherCourse.CourseId = CourseId;
-                    //var teacherCourse = new TeacherCourse()
+                    //var teacherCoursez = new TeacherCourse()
                     //{
                     //    TeacherId = id,
                     //    CourseId = CourseId
                     //};
-
-
-
                     //context.TeacherCourses.Add(teacherCourse);
 
                 }
-                var teacher = context.Teachers.Find(teacherModel.TeacherId);
+                var teacher = context.Teachers.FirstOrDefault(x=>x.TeacherId == teacherModel.TeacherSNN);
 
-                teacher.TeacherId = teacherModel.TeacherId;
+                teacher.TeacherId = teacherModel.TeacherSNN;
                 teacher.FName = teacherModel.FName;
                 teacher.Email = teacherModel.Email;
                 teacher.Password = teacherModel.Password;
                 teacher.LName = teacherModel.LName;
                 teacher.Gender = teacherModel.Gender;
-                teacher.SSN = teacherModel.SSN;
+             //   teacher.SSN = teacherModel.SSN;
                 teacher.Street = teacherModel.Street;
                 teacher.City = teacherModel.City;
                 teacher.Phone = teacherModel.Phone;
@@ -140,7 +134,7 @@ namespace School_managment_system.Services
             {
                 var teacher = new Teacher()
                 {
-                    TeacherId = teacherModel.TeacherId,
+                    TeacherId = teacherModel.TeacherSNN,
                     FName = teacherModel.FName,
                     Age = teacherModel.Age,
                     City = teacherModel.City,
@@ -150,7 +144,7 @@ namespace School_managment_system.Services
                     Gender = teacherModel.Gender,
                     Password = teacherModel.Password,
                     Phone = teacherModel.Phone,
-                    SSN = teacherModel.SSN,
+                //    SSN = teacherModel.SSN,
 
                 };
                 context.Teachers.Add(teacher);
@@ -169,7 +163,7 @@ namespace School_managment_system.Services
             }
         }
 
-        public static void DeleteOne( int id)
+        public static void DeleteOne( string id)
         {
             using (var context = new FinalSchool())
             {

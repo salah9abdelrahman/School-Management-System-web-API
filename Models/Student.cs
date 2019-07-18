@@ -16,24 +16,28 @@ namespace School_managment_system.Models
             Results = new HashSet<Result>();
 
         }
-
-        public int StudentId { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string StudentId { get; set; }
         [Required]
         public string FName { get; set; }
         [Required]
         public string LName { get; set; }
         public int Age { get; set; }
         [Required]
-        public int SNN { get; set; }
+        //public int SNN { get; set; }
         public string Email { get; set; }
+        public string Password { get; set; }
         public string Phone { get; set; }
         public string Gender { get; set; }
-        public DateTime? JoinDate { get; set; }
         public string City { get; set; }
         public string Street { get; set; }
         //-----------------------------------
 
-        public int ParentId { get; set; }
+        //public string ParentId { get; set; }
+        [ForeignKey("Parent")]
+        public string ParentSNN { get; set; }
+
         public virtual Parent Parent { get; set; }
         //-------------------------------------
        public int? ClassRoomId { get; set; }

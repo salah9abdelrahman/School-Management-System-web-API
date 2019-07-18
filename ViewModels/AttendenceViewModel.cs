@@ -7,13 +7,13 @@ namespace School_managment_system.ViewModels
 {
     public class AttendenceViewModel
     {
-
+        public string StudentSNN { get; set; }
         public DateTime SessionDate { get; set; }
         public bool IsAttended { get; set; }
-        public StudentViewModel Student { get; set; }
-        public CourseViewModel   Course { get; set; }
-        public TeacherViewModel   Teacher { get; set; }
-        //public int TeacherId { get; set; }
+        public string StudentName { get; set; }
+        public string CourseName { get; set; }
+        public string TeacherName { get; set; }
 
+        public string TeacherSNN { get; set; }
     }
 }

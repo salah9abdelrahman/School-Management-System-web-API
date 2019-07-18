@@ -10,7 +10,7 @@ namespace School_managment_system.ViewModels
         public int ClassId { get; set; }
 
         public string Name { get; set; }
-        public int LevelId { get; set; }
+        //public int LevelId { get; set; }
         public string LevelName { get; set; }
     }
 }

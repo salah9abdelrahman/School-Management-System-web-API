@@ -7,88 +7,119 @@ using School_managment_system.Models;
 
 namespace School_managment_system.Services
 {
-
- 
     public class AttendenceService
     {
-        //public static int Post(AttendenceViewModel attendenceViewModel)
-        //{
-        //    var Student = new Student()
-        //    {
-        //        Age = attendenceViewModel.Student.Age,
-        //        City = attendenceViewModel.Student.City,
-        //        FName = attendenceViewModel.Student.FName,
-        //        LName = attendenceViewModel.Student.LName,
-        //        JoinDate = attendenceViewModel.Student.JoinDate,
-        //        Email = attendenceViewModel.Student.Email,
-        //        Street = attendenceViewModel.Student.Street,
-
-        //    }
-        //    var attendence = new Attendence()
-        //    {
-        //        IsAttended = attendenceViewModel.IsAttended,
-        //        SessionDate = attendenceViewModel.SessionDate,
-        //        Student = ,
-
-        //    }
-        //}
-
+        public static IEnumerable<AttendenceViewModel> GetAll()
+        {
+            using (var context = new FinalSchool())
+            {
+                var attendViewList = new List<AttendenceViewModel>();
+                foreach (var attend in context.Attendences.ToList())
+                {
+                    var attendenceView = new AttendenceViewModel()
+                    {
+                        CourseName = attend.Session.Course.Name,
+                        IsAttended = attend.IsAttended,
+                        SessionDate = attend.Session.StartDate,
+                        StudentName = attend.Student.FName + ' ' + attend.Student.LName,
+                        TeacherName = attend.Session.Teacher.FName + ' ' + attend.Session.Teacher.LName,
+                    };
+                    attendViewList.Add(attendenceView);
+                }
+                return attendViewList;
+            }
             
-        //public static AttendenceViewModel Get(int id)
-        //{
-        //    using(var context = new FinalSchool())
-        //    {
-        //        var attendenceView = new AttendenceViewModel();
-        //        {
+        }
+
+        public static IEnumerable<AttendenceViewModel> GetAttendencesToStudent(string snn)
+        {
+            using(var context = new FinalSchool())
+            {
+                var student = context.Students.FirstOrDefault(x=>x.StudentId == snn);
+                var studentAttend = context.Attendences.Where(x => x.StudentId == student.StudentId).ToList();
+                var studentAttendViewList = new List<AttendenceViewModel>();
+                foreach (var item in studentAttend)
+                {
+                    var studentAttendView = new AttendenceViewModel()
+                    {
+                        StudentSNN = item.StudentId,
+                        CourseName = item.Session.Course.Name,
+                        IsAttended = item.IsAttended,
+                        SessionDate = item.Session.StartDate,
+                        StudentName = item.Student.FName + ' ' + item.Student.FName,
+                        TeacherName = item.Session.Teacher.FName + ' ' + item.Session.Teacher.LName,
+                    };
+                    studentAttendViewList.Add(studentAttendView);
+                }
+                return studentAttendViewList;
+            }
+        }
+
+
+
+        public static void ChangeAttendenceState(AttendenceViewModel attendenceViewModel)
+        {
+            using(var context = new FinalSchool())
+            {
+                var studentAtt = context.Students.FirstOrDefault(x => x.StudentId == attendenceViewModel.StudentSNN);
+                var courseAtt = context.Courses.FirstOrDefault(x => x.Name == attendenceViewModel.CourseName);
+                var teacher = context.Teachers.FirstOrDefault(x => x.FName == attendenceViewModel.TeacherName);
+                var session = new Session
+                {
+                    Course = courseAtt,
+                    CourseId = courseAtt.CourseId,
+                   StartDate = DateTime.Now,
+                    Teacher = teacher,
+                    TeacherId = teacher.TeacherId,
+
+                };
+                context.Sessions.Add(session);
+                context.SaveChanges();
+                var attendence = new Attendence()
+                {
+                    Student = studentAtt,
+                    StudentId = studentAtt.StudentId,
+                    IsAttended = attendenceViewModel.IsAttended,
+                    Session = session,
+                    SessionId = session.SessionId,
                     
-        //        }
-        //        var studentsClassList = context.Students.Where(x => x.ClassRoomId == id);
-        //        var studentViewList = new List<StudentViewModel>();
-        //        foreach (var item in studentsClassList)
-        //        {
-        //            var classView = new ClassRoomViewModel()
-        //            {
-        //                Name = item.ClassRoom.Name,
-        //                LevelId = item.ClassRoom.LevelId
-        //            };
+                };
+                context.Attendences.Add(attendence);
+                context.SaveChanges();
+            }
 
-        //            var parentView = new ParentViewModel()
-        //            {
-        //                Email = item.Parent.Email,
-        //                FName = item.Parent.FName,
-        //                LName = item.Parent.LName,
-        //                Password = item.Parent.Password,
-        //                SNN = item.Parent.SNN,
-        //                ParentId = item.Parent.ParentId
-        //            };
+        }
 
+        public static void PostListOfAttendenceState(List< AttendenceViewModel> attendenceViewModel)
+        {
+            using (var context = new FinalSchool())
+            {
+                var CN = attendenceViewModel[0].CourseName;
+                var courseAtt = context.Courses.FirstOrDefault(x => x.Name == CN);
+                var te = attendenceViewModel[0].TeacherSNN;
+                Teacher teacher = context.Teachers.FirstOrDefault(x => x.TeacherId == te);
 
+                var session = new Session
+                {
+                    CourseId = courseAtt.CourseId,
+                    StartDate = DateTime.Now,
+                    TeacherId = teacher.TeacherId,
 
-
-
-        //            var stu = new StudentViewModel()
-        //            {
-        //                Age = item.Age,
-        //                City = item.City,
-        //                Email = item.Email,
-        //                FName = item.FName,
-        //                Gender = item.Gender,
-        //                JoinDate = item.JoinDate,
-        //                LName = item.LName,
-        //                SNN = item.SNN,
-        //                Phone = item.Phone,
-        //                Street = item.Street,
-        //                StudentId = item.StudentId,
-        //                Klass = classView,
-        //                Parent = parentView,
-
-        //            };
-
-        //            studentViewList.Add(stu);
-        //        }
-        //        attendenceView.Student = studentViewList;
-
-        //    }
-        //}
+                };
+                context.Sessions.Add(session);
+                context.SaveChanges();
+                foreach (var item in attendenceViewModel)
+                {
+                    var attendence = new Attendence()
+                    {
+                        StudentId = item.StudentSNN,
+                        IsAttended = item.IsAttended,
+                        SessionId = session.SessionId,
+                    };
+                    context.Attendences.Add(attendence);
+                }
+                context.SaveChanges();
+            }
+        }
     }
 }
