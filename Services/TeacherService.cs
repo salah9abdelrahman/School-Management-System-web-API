@@ -54,20 +54,15 @@ namespace School_managment_system.Services
         {
             using (var context = new FinalSchool())
             {
-                var teacher = context.Teachers.Find(id);
-                var courseTeacher = context.TeacherCourses.Where(x => x.TeacherId == teacher.TeacherId).ToList();
-                List<int> ids = new List<int>();
-                foreach (var courseId in courseTeacher)
-                {
-                    ids.Add(courseId.CourseId);
-                }
-                List<string> courseList = new List<string>();
 
-                foreach (var i in ids)
-                {
-                    var x = context.Courses.FirstOrDefault(ww => ww.CourseId == i).Name;
-                    courseList.Add(x);
-                }
+                var teacher = context.Teachers.Find(id);
+                var courses = (from course in context.Courses
+                               join techcourse in context.TeacherCourses
+                               on course.CourseId equals techcourse.CourseId
+                               join teach in context.Teachers
+                               on techcourse.TeacherId equals teach.TeacherId
+                               where teach.TeacherId == id
+                               select course.Name).ToList();
 
                 var teacherModel = new TeacherViewModel()
                 {
@@ -81,7 +76,7 @@ namespace School_managment_system.Services
                     Gender = teacher.Gender,
                     Password = teacher.Password,
                     Phone = teacher.Phone,
-                    CourseName = courseList,
+                    CourseName = courses,
                 };
                 return teacherModel;
             }
@@ -99,13 +94,6 @@ namespace School_managment_system.Services
                     var teacherCourse = context.TeacherCourses.Find(id);
                     teacherCourse.TeacherId = id;
                     teacherCourse.CourseId = CourseId;
-                    //var teacherCoursez = new TeacherCourse()
-                    //{
-                    //    TeacherId = id,
-                    //    CourseId = CourseId
-                    //};
-                    //context.TeacherCourses.Add(teacherCourse);
-
                 }
                 var teacher = context.Teachers.FirstOrDefault(x => x.TeacherId == teacherModel.TeacherSNN);
 
@@ -115,7 +103,6 @@ namespace School_managment_system.Services
                 teacher.Password = teacherModel.Password;
                 teacher.LName = teacherModel.LName;
                 teacher.Gender = teacherModel.Gender;
-                //   teacher.SSN = teacherModel.SSN;
                 teacher.Street = teacherModel.Street;
                 teacher.City = teacherModel.City;
                 teacher.Phone = teacherModel.Phone;
