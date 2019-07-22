@@ -25,20 +25,15 @@ namespace School_managment_system.Services
                         Email = item.Email,
                         FName = item.FName,
                         Gender = item.Gender,
-                        //  JoinDate = item.JoinDate,
                         LName = item.LName,
-                        // SNN=item.SNN,
-                        // SNN = item.StudentId,
                         Phone = item.Phone,
                         Street = item.Street,
-                        // StudentId=item.StudentId,
                         ClassName = item.ClassRoom.Name,
                         StudentSNN = item.StudentId,
                         LevelName = item.ClassRoom.Level.Name,
                         ParentFName = item.Parent.FName,
                         ParentLName = item.Parent.LName,
                         ParentSNN = item.Parent.ParentSNN,
-
                     };
                     studentViewList.Add(studentView);
                 }
@@ -58,9 +53,7 @@ namespace School_managment_system.Services
                     Email = student.Email,
                     FName = student.FName,
                     Gender = student.Gender,
-                    //JoinDate = student.JoinDate,
                     LName = student.LName,
-                    //SNN = student.,
                     Phone = student.Phone,
                     Street = student.Street,
                     StudentSNN = student.StudentId,
@@ -93,9 +86,7 @@ namespace School_managment_system.Services
                     Email = studentViewModel.Email,
                     FName = studentViewModel.FName,
                     Gender = studentViewModel.Gender,
-                    //JoinDate = studentViewModel.JoinDate,
                     LName = studentViewModel.LName,
-                    //   SNN = studentViewModel.SNN,
                     Street = studentViewModel.Street,
                     StudentId = studentViewModel.StudentSNN,
                     Phone = studentViewModel.Phone,
@@ -123,9 +114,7 @@ namespace School_managment_system.Services
                 student.Email = studentViewModel.Email;
                 student.FName = studentViewModel.FName;
                 student.Gender = studentViewModel.Gender;
-                //student.JoinDate = studentViewModel.JoinDate;
                 student.LName = studentViewModel.LName;
-                //student.SNN = studentViewModel.SNN;
                 student.Street = studentViewModel.Street;
                 student.StudentId = studentViewModel.StudentSNN;
                 student.Phone = studentViewModel.Phone;
@@ -136,8 +125,6 @@ namespace School_managment_system.Services
                 {
                     FName = studentViewModel.ParentFName,
                     LName = studentViewModel.LName,
-                    //  SNN = studentViewModel.SNN,               
-
                 };
 
                 context.Parents.Add(parent);
@@ -156,7 +143,7 @@ namespace School_managment_system.Services
             }
         }
 
-        /////////////////////
+        /////
         ///Additions
          /*to get Students in a specific class in a specific course*/
         public static IEnumerable<StudentViewModel> GetStudentsToSepcificClass(string className)
@@ -175,9 +162,7 @@ namespace School_managment_system.Services
                         Email = item.Email,
                         FName = item.FName,
                         Gender = item.Gender,
-                        // JoinDate = item.JoinDate,
                         LName = item.LName,
-                        // SNN = item.SNN,
                         Phone = item.Phone,
                         Street = item.Street,
                         StudentSNN = item.StudentId,

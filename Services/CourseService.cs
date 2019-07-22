@@ -10,7 +10,6 @@ namespace School_managment_system.Services
 {
     public class CourseService
     {
-
         public static IEnumerable<CourseViewModel> GetAll()
         {
             using (var context = new FinalSchool())
@@ -28,8 +27,6 @@ namespace School_managment_system.Services
                 return courseListModel;
             }
         }
-
-
         public static CourseViewModel GetOne(int id)
         {
             using (var context = new FinalSchool())
@@ -45,8 +42,6 @@ namespace School_managment_system.Services
                 return courseView;
             }
         }
-
-
         public static int PostOne(CourseViewModel courseViewModel)
         {
             using (var context = new FinalSchool())
@@ -63,7 +58,6 @@ namespace School_managment_system.Services
                 return course.CourseId;
             }
         }
-
         public static void PutOne(CourseViewModel courseViewModel)
         {
             using (var context = new FinalSchool())
@@ -76,8 +70,6 @@ namespace School_managment_system.Services
             }
 
         }
-
-
         public static int DeleteOne(int id)
         {
             using (var context = new FinalSchool())
@@ -98,18 +90,16 @@ namespace School_managment_system.Services
             using (var context = new FinalSchool())
             {
                 var CourseViewModelList = new List<CourseViewModel>();
-                var teacherCourses = context.TeacherCourses.Where(x => x.TeacherId == snn).ToList();
-                var coursesId = new List<int>();
-                foreach (var courseId in teacherCourses)
-                {
-                    coursesId.Add(courseId.CourseId);
-                }
-                var courses = new List<Course>();
-                foreach (var courseid in coursesId)
-                {
-                    courses.Add(context.Courses.FirstOrDefault(x => x.CourseId == courseid));
-                }
-                foreach (var course in courses)
+
+                var coursesNeww = (from teacher in context.Teachers
+                                   join tc in context.TeacherCourses
+                                   on teacher.TeacherId equals tc.TeacherId
+                                   where teacher.TeacherId == snn
+                                   join course in context.Courses
+                                   on tc.CourseId equals course.CourseId
+                                   select course).ToList();
+
+                foreach (var course in coursesNeww)
                 {
                     var courseView = new CourseViewModel()
                     {

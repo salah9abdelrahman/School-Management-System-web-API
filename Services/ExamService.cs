@@ -45,8 +45,6 @@ namespace School_managment_system.Services
                     MaxExamDegree = exam.MaxExamDegree
 
                 };
-
-
                 return examModel;
             }
         }
@@ -63,7 +61,6 @@ namespace School_managment_system.Services
                     ExamName = examViewModel.ExamName,
                     MaxExamDegree = examViewModel.MaxExamDegree,
                     CourseId = courseId,
-                    
                 };
                 context.Exams.Add(exam);
                 context.SaveChanges();
@@ -80,8 +77,6 @@ namespace School_managment_system.Services
                 exam.ExamName = examViewModel.ExamName;
                 exam.CourseId = courseId;
                 exam.MaxExamDegree = examViewModel.MaxExamDegree;
-
-
                 context.SaveChanges();
             }
 
@@ -95,11 +90,7 @@ namespace School_managment_system.Services
                 var exam = context.Exams.Find(id);
                 context.Exams.Remove(exam);
                 context.SaveChanges();
-
             }
-
         }
-
-
     }
 }

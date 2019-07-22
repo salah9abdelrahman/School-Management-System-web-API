@@ -35,10 +35,14 @@ namespace School_managment_system.Services
         {
             using(var context = new FinalSchool())
             {
-                var student = context.Students.FirstOrDefault(x=>x.StudentId == snn);
-                var studentAttend = context.Attendences.Where(x => x.StudentId == student.StudentId).ToList();
+                var studentAttendences = (from stu in context.Students
+                                          from attend in context.Attendences
+                                          where stu.StudentId == attend.StudentId
+                                          select attend)
+                                          .ToList();
+
                 var studentAttendViewList = new List<AttendenceViewModel>();
-                foreach (var item in studentAttend)
+                foreach (var item in studentAttendences)
                 {
                     var studentAttendView = new AttendenceViewModel()
                     {

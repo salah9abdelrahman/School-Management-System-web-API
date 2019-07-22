@@ -15,7 +15,15 @@ namespace School_managment_system.Models
         public DateTime  StartDate {get; set;}
        // public DateTime  EndDate {get; set;}
         public ICollection<Attendence> Attendences  { get; set; }
-        public int TeacherCourseId { get; set; }
+        public int CourseId { get; set; }
+        public virtual Course Course { get; set; }
+
+        public string TeacherId { get; set; }
+
+        public virtual Teacher Teacher { get; set; }
+
+
+
 
     }
 }

@@ -32,8 +32,7 @@ namespace School_managment_system.Services
                     }
                     var teacher = new TeacherViewModel()
                     {
-                        
-                        //TeacherId = item.TeacherId,
+
                         FName = item.FName,
                         Age = item.Age,
                         City = item.City,
@@ -73,7 +72,7 @@ namespace School_managment_system.Services
                 var teacherModel = new TeacherViewModel()
                 {
                     TeacherSNN = teacher.TeacherId,
-                    FName =teacher.FName,
+                    FName = teacher.FName,
                     Age = teacher.Age,
                     City = teacher.City,
                     Street = teacher.Street,
@@ -82,7 +81,6 @@ namespace School_managment_system.Services
                     Gender = teacher.Gender,
                     Password = teacher.Password,
                     Phone = teacher.Phone,
-                   // SSN = teacher.SSN,
                     CourseName = courseList,
                 };
                 return teacherModel;
@@ -109,7 +107,7 @@ namespace School_managment_system.Services
                     //context.TeacherCourses.Add(teacherCourse);
 
                 }
-                var teacher = context.Teachers.FirstOrDefault(x=>x.TeacherId == teacherModel.TeacherSNN);
+                var teacher = context.Teachers.FirstOrDefault(x => x.TeacherId == teacherModel.TeacherSNN);
 
                 teacher.TeacherId = teacherModel.TeacherSNN;
                 teacher.FName = teacherModel.FName;
@@ -117,12 +115,12 @@ namespace School_managment_system.Services
                 teacher.Password = teacherModel.Password;
                 teacher.LName = teacherModel.LName;
                 teacher.Gender = teacherModel.Gender;
-             //   teacher.SSN = teacherModel.SSN;
+                //   teacher.SSN = teacherModel.SSN;
                 teacher.Street = teacherModel.Street;
                 teacher.City = teacherModel.City;
                 teacher.Phone = teacherModel.Phone;
                 teacher.Age = teacherModel.Age;
-                
+
                 context.SaveChanges();
             }
 
@@ -144,7 +142,7 @@ namespace School_managment_system.Services
                     Gender = teacherModel.Gender,
                     Password = teacherModel.Password,
                     Phone = teacherModel.Phone,
-                //    SSN = teacherModel.SSN,
+                    //    SSN = teacherModel.SSN,
 
                 };
                 context.Teachers.Add(teacher);
@@ -157,13 +155,13 @@ namespace School_managment_system.Services
                         TeacherId = teacher.TeacherId,
                         CourseId = CourseId
                     };
-                    context.TeacherCourses.Add(teacherCourse);                   
+                    context.TeacherCourses.Add(teacherCourse);
                 }
                 context.SaveChanges();
             }
         }
 
-        public static void DeleteOne( string id)
+        public static void DeleteOne(string id)
         {
             using (var context = new FinalSchool())
             {

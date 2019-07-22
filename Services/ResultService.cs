@@ -14,8 +14,11 @@ namespace School_managment_system.Services
             using (var context = new FinalSchool())
             {
                 var studentResultViewList = new List<ResultViewModel>();
-                var student = context.Students.Find(snn);
-                var studentResult = context.Results.Where(x => x.StudentId == student.StudentId).ToList();
+                var studentResult = from student in context.Students
+                                    join result in context.Results
+                                    on student.StudentId equals result.StudentId
+                                    where student.StudentId == snn
+                                    select result;
                 foreach (var item in studentResult)
                 {
                     var studentResultView = new ResultViewModel()
@@ -33,32 +36,25 @@ namespace School_managment_system.Services
 
         public static IEnumerable<ResultViewModel> GetToCourse(string courseName, string studentId)
         {
-            using (var context =
-                new FinalSchool())
+            using (var context =new FinalSchool())
             {
                 var course = context.Courses.FirstOrDefault(x => x.Name == courseName);
-                var resultExamsToCourse = context.Exams.Where(x => x.CourseId == course.CourseId).ToList();
-                var ExamIds = new List<int>();         
+                var courseExamsResults = from exam in context.Exams
+                                         join cour in context.Courses
+                                         on exam.CourseId equals cour.CourseId
+                                         where cour.CourseId == course.CourseId
+                                         join result in context.Results
+                                         on exam.ExamId equals result.ExamId
+                                         select result;
 
-                foreach (var item in resultExamsToCourse)
-                {
-                    var id = item.ExamId;
-                    ExamIds.Add(id);
-                }
-                var resultsToOneCourseByExamIdList = new List<Result>();
-                foreach (var item in ExamIds)
-                {
-                    var result = context.Results.FirstOrDefault(x => x.ExamId == item);
-                    if (result != null)
-                    {
-                                    resultsToOneCourseByExamIdList.Add(result);
+                var studentResults = from student in context.Students
+                                     join result in courseExamsResults
+                                     on student.StudentId equals result.StudentId
+                                     where student.StudentId == studentId
+                                     select result;
 
-                    }
-
-                }
-                var resultToStudent = resultsToOneCourseByExamIdList.Where(x => x.StudentId == studentId).ToList();
                 var resultToStudentViewList = new List<ResultViewModel>();
-                foreach (var item in resultToStudent)
+                foreach (var item in studentResults)
                 {
                     var result = new ResultViewModel
                     {
