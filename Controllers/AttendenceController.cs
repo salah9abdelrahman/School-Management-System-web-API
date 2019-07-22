@@ -10,19 +10,19 @@ using System.Web.Http.Cors;
 
 namespace School_managment_system.Controllers
 {
-    
+
     public class AttendenceController : ApiController
     {
-        public IEnumerable<AttendenceViewModel> Get()
+        public IHttpActionResult Get()
         {
-            return AttendenceService.GetAll();
+            return Ok(AttendenceService.GetAll());
         }
         public IEnumerable<AttendenceViewModel> GetAttendencesToOneStudent(string id)
         {
             return AttendenceService.GetAttendencesToStudent(id);
         }
 
-        public void Post (AttendenceViewModel attendenceViewModel)
+        public void Post(AttendenceViewModel attendenceViewModel)
         {
             AttendenceService.ChangeAttendenceState(attendenceViewModel);
         }

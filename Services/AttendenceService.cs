@@ -28,13 +28,14 @@ namespace School_managment_system.Services
                 }
                 return attendViewList;
             }
-            
+
         }
 
         public static IEnumerable<AttendenceViewModel> GetAttendencesToStudent(string snn)
         {
-            using(var context = new FinalSchool())
+            using (var context = new FinalSchool())
             {
+
                 var studentAttendences = (from stu in context.Students
                                           from attend in context.Attendences
                                           where stu.StudentId == attend.StudentId
@@ -63,7 +64,7 @@ namespace School_managment_system.Services
 
         public static void ChangeAttendenceState(AttendenceViewModel attendenceViewModel)
         {
-            using(var context = new FinalSchool())
+            using (var context = new FinalSchool())
             {
                 var studentAtt = context.Students.FirstOrDefault(x => x.StudentId == attendenceViewModel.StudentSNN);
                 var courseAtt = context.Courses.FirstOrDefault(x => x.Name == attendenceViewModel.CourseName);
@@ -72,7 +73,7 @@ namespace School_managment_system.Services
                 {
                     Course = courseAtt,
                     CourseId = courseAtt.CourseId,
-                   StartDate = DateTime.Now,
+                    StartDate = DateTime.Now,
                     Teacher = teacher,
                     TeacherId = teacher.TeacherId,
 
@@ -86,7 +87,7 @@ namespace School_managment_system.Services
                     IsAttended = attendenceViewModel.IsAttended,
                     Session = session,
                     SessionId = session.SessionId,
-                    
+
                 };
                 context.Attendences.Add(attendence);
                 context.SaveChanges();
@@ -94,7 +95,7 @@ namespace School_managment_system.Services
 
         }
 
-        public static void PostListOfAttendenceState(List< AttendenceViewModel> attendenceViewModel)
+        public static void PostListOfAttendenceState(List<AttendenceViewModel> attendenceViewModel)
         {
             using (var context = new FinalSchool())
             {

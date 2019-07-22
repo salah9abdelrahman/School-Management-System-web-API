@@ -369,3 +369,30 @@ E:\IT\C Sharp\School managment system\obj\Debug\School managment system.csproj.C
 E:\IT\C Sharp\School managment system\obj\Debug\School managment system.csproj.CopyComplete
 E:\IT\C Sharp\School managment system\obj\Debug\School managment system.dll
 E:\IT\C Sharp\School managment system\obj\Debug\School managment system.pdb
+E:\IT\Angular\School\obj\Debug\School managment system.dll
+E:\IT\Angular\School\obj\Debug\School managment system.pdb
+E:\IT\Angular\School\bin\School managment system.dll.config
+E:\IT\Angular\School\bin\School managment system.dll
+E:\IT\Angular\School\bin\School managment system.pdb
+E:\IT\Angular\School\bin\Newtonsoft.Json.dll
+E:\IT\Angular\School\bin\EntityFramework.xml
+E:\IT\Angular\School\bin\EntityFramework.SqlServer.xml
+E:\IT\Angular\School\bin\System.Web.Http.Cors.xml
+E:\IT\Angular\School\bin\System.Net.Http.Formatting.xml
+E:\IT\Angular\School\bin\System.Web.Helpers.xml
+E:\IT\Angular\School\bin\System.Web.Http.xml
+E:\IT\Angular\School\bin\System.Web.Http.WebHost.xml
+E:\IT\Angular\School\bin\System.Web.Mvc.xml
+E:\IT\Angular\School\bin\System.Web.Optimization.xml
+E:\IT\Angular\School\bin\System.Web.Razor.xml
+E:\IT\Angular\School\bin\System.Web.WebPages.xml
+E:\IT\Angular\School\bin\System.Web.WebPages.Deployment.xml
+E:\IT\Angular\School\bin\System.Web.WebPages.Razor.xml
+E:\IT\Angular\School\bin\Antlr3.Runtime.pdb
+E:\IT\Angular\School\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\IT\Angular\School\obj\Debug\School managment system.csprojAssemblyReference.cache
+E:\IT\Angular\School\obj\Debug\School_managment_system.Migrations.dgss.resources
+E:\IT\Angular\School\obj\Debug\School_managment_system.Migrations.dgsssd.resources
+E:\IT\Angular\School\obj\Debug\School managment system.csproj.GenerateResource.cache
+E:\IT\Angular\School\obj\Debug\School managment system.csproj.CoreCompileInputs.cache
+E:\IT\Angular\School\obj\Debug\School managment system.csproj.CopyComplete
