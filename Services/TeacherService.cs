@@ -129,8 +129,6 @@ namespace School_managment_system.Services
                     Gender = teacherModel.Gender,
                     Password = teacherModel.Password,
                     Phone = teacherModel.Phone,
-                    //    SSN = teacherModel.SSN,
-
                 };
                 context.Teachers.Add(teacher);
 
