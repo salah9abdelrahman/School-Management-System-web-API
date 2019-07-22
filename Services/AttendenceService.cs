@@ -37,8 +37,9 @@ namespace School_managment_system.Services
             {
 
                 var studentAttendences = (from stu in context.Students
-                                          from attend in context.Attendences
-                                          where stu.StudentId == attend.StudentId
+                                          join attend in context.Attendences
+                                          on stu.StudentId equals attend.StudentId
+                                          where stu.StudentId == snn
                                           select attend)
                                           .ToList();
 

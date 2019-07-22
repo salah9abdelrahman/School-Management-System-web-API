@@ -212,7 +212,6 @@
     <Compile Include="Services\ExamService.cs" />
     <Compile Include="Services\LevelService.cs" />
     <Compile Include="Services\ResultService.cs" />
-    <Compile Include="Services\SessionService.cs" />
     <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\TeacherService.cs" />
     <Compile Include="ViewModels\AttendenceViewModel.cs" />
@@ -346,7 +345,6 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
