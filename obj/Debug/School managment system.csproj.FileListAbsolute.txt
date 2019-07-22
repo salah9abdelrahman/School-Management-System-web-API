@@ -396,3 +396,4 @@ E:\IT\Angular\School\obj\Debug\School_managment_system.Migrations.dgsssd.resourc
 E:\IT\Angular\School\obj\Debug\School managment system.csproj.GenerateResource.cache
 E:\IT\Angular\School\obj\Debug\School managment system.csproj.CoreCompileInputs.cache
 E:\IT\Angular\School\obj\Debug\School managment system.csproj.CopyComplete
+E:\IT\Angular\School\bin\Newtonsoft.Json.xml

@@ -35,7 +35,7 @@ namespace School_managment_system.Services
         {
             using (var context = new FinalSchool())
             {
-
+                var student = context.Students.Find(snn);
                 var studentAttendences = (from stu in context.Students
                                           join attend in context.Attendences
                                           on stu.StudentId equals attend.StudentId
@@ -60,9 +60,6 @@ namespace School_managment_system.Services
                 return studentAttendViewList;
             }
         }
-
-
-
         public static void ChangeAttendenceState(AttendenceViewModel attendenceViewModel)
         {
             using (var context = new FinalSchool())
