@@ -1,5 +1,5 @@
 # Teechnologies:
-  -Entityframework (EF6). 
+  - Entityframework (EF6). 
   - SQL.
   - Linq.
   - Asp.net web API.
