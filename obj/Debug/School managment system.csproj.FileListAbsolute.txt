@@ -397,3 +397,69 @@ E:\IT\Angular\School\obj\Debug\School managment system.csproj.GenerateResource.c
 E:\IT\Angular\School\obj\Debug\School managment system.csproj.CoreCompileInputs.cache
 E:\IT\Angular\School\obj\Debug\School managment system.csproj.CopyComplete
 E:\IT\Angular\School\bin\Newtonsoft.Json.xml
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\obj\Debug\School managment system.csprojAssemblyReference.cache
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\obj\Debug\School managment system.csproj.CoreCompileInputs.cache
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\obj\Debug\School managment system.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\obj\Debug\School managment system.pdb
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\School managment system.dll.config
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\School managment system.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\School managment system.pdb
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\Newtonsoft.Json.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\Newtonsoft.Json.xml
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\obj\Debug\School managment system.csproj.CopyComplete
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\csc.exe
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\csc.exe.config
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\csc.rsp
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\csi.exe
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\csi.exe.config
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\csi.rsp
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\Microsoft.Managed.Core.targets
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.AppContext.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Collections.Immutable.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Console.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Globalization.Calendars.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.IO.Compression.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.IO.FileSystem.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Net.Http.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Net.Sockets.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Reflection.Metadata.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.ValueTuple.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Xml.XmlDocument.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Xml.XPath.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\vbc.exe
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\vbc.exe.config
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\vbc.rsp
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\VBCSCompiler.exe
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\roslyn\VBCSCompiler.exe.config
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\System.Web.Cors.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\System.Web.Http.Cors.dll
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\bin\System.Web.Http.Cors.xml
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\obj\Debug\School_managment_system.Migrations.inital.resources
+D:\IT\SQL\School-Management-System-web-API\School-Management-System-web-API\obj\Debug\School managment system.csproj.GenerateResource.cache
